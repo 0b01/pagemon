@@ -16,6 +16,7 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     Lib
+                     , Diff
   build-depends:       base >= 4.7 && < 5
                      , wreq
                      , aeson
@@ -26,6 +27,7 @@ library
                      , cryptohash
                      , Diff
                      , containers
+                     , tagsoup
   default-language:    Haskell2010
 
 executable pagemon-exe
@@ -41,7 +43,6 @@ executable pagemon-exe
                      , text
                      , containers
                      , Diff
-                     , tagsoup
   default-language:    Haskell2010
 
 test-suite pagemon-test
