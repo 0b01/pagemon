@@ -56,9 +56,11 @@ getPages urls = do
 
 testURLs :: [URL]
 testURLs = [
-             URL { url = "https://github.com" --"http://www.supremenewyork.com/shop/accessories/nizey7qdx/y6r07ij1u"
-                 , opts = [ BlackList Open "meta"
-                          , BlackList Text "*"
+             URL { url = "http://www.supremenewyork.com/shop/accessories/nizey7qdx/y6r07ij1u"
+                 , opts = [
+                            BlackList Open "meta"
+                          , WhiteList Open "*"
+                            -- , BlackList TextRegex "*"
                           ]
                  }
            ]

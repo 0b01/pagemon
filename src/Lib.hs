@@ -25,11 +25,11 @@ data Diff = Diff { pageUrl :: PageURL
 
 data TagType = Open
              | Close
-             | Text
+             | TextRegex
              deriving (Show, Eq, Ord)
 
-data Opt = BlackList TagType String
-         | WhiteList TagType String
+data Opt = BlackList TagType PageSource
+         | WhiteList TagType PageSource
          deriving (Show, Eq, Ord)
 
 type Opts = [Opt]
